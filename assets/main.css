@@ -154,3 +154,80 @@ footer{font-size:0.875em; margin-top:12em; text-align:center;}
     table.footer{font-size:0.33em;}
 }
 
+
+/* Speaker Layout */
+.speaker-layout {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px; /* Space between the image and the text */
+    margin: 20px 0;
+}
+
+.speaker-layout img {
+    width: 150px; /* Fixed width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Makes the image circular */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+.speaker-layout img {
+    width: 150px; /* Set the width of the image */
+    height: 200px; /* Set the height of the image to make it rectangular */
+    border-radius: 8px; /* Slightly round the corners for a modern look */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+    object-fit: cover; /* Ensures the image fills the frame without distortion */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .speaker-layout {
+        flex-direction: column; /* Stack image and text vertically on smaller screens */
+        align-items: center;
+        text-align: center;
+    }
+
+    .speaker-layout img {
+        width: 120px; /* Smaller image for smaller screens */
+    }
+
+    .speaker-layout p {
+        text-align: center;
+    }
+}
+.organizers-layout div {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align the image and text */
+    text-align: center; /* Center-align the text */
+}
+/* Organizers Layout */
+.organizers-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between items */
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 1200px; /* Optional: Restrict the maximum width */
+}
+
+.organizers-layout div {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align the image and text */
+    text-align: center; /* Center-align the text */
+}
+
+.organizers-layout img {
+    width: 100%; /* Full width of the grid cell */
+    height: 200px; /* Fixed height for rectangular images */
+    object-fit: cover; /* Ensures the image fills the rectangle without distortion */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+.organizers-layout p {
+    margin-top: 10px; /* Adds space between the image and the text */
+    font-size: 1em;
+    color: #505050;
+}
